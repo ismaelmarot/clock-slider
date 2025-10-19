@@ -1,4 +1,4 @@
-import "./DigitColumn.css";
+import { DigitalStrip, DigitColumnStyle, Digit } from './DigitColumn.styled';
 
 interface DigitColumnProps {
   digits: number[];
@@ -7,18 +7,15 @@ interface DigitColumnProps {
 
 const DigitColumn = ({ digits, active }: DigitColumnProps) => {
   return (
-    <div className="digit-column">
-      <div
-        className="digit-strip"
-        style={{ transform: `translateY(-${active * 2.5}em)` }}
-      >
+    <DigitColumnStyle>
+      <DigitalStrip active={active}>
         {digits.map((d) => (
-          <div key={d} className={`digit ${d === active ? "active" : ""}`}>
+          <Digit key={d} $isActive={d === active}>
             {d}
-          </div>
+          </Digit>
         ))}
-      </div>
-    </div>
+      </DigitalStrip>
+    </DigitColumnStyle>
   );
 };
 
