@@ -46,8 +46,7 @@ export const Column = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 1px;
-    height: 100%;
+    ${size('1px','100%')}
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.8),
