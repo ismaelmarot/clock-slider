@@ -5,7 +5,7 @@ import { size } from '../../helpers/setSize';
 export const ClockContainer = styled.div`
   ${flex('row','center','center')}
   ${size('100%', '100vh')}
-  gap: 10px;
+  gap: 20px;
   font-family: monospace;
   font-size: 2rem;
 `;
@@ -24,7 +24,6 @@ export const Column = styled.div`
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
     inset 0 0 0px 0px rgba(255, 255, 255, 0);
   position: relative;
-  /* overflow: hidden; */
 
   &::before {
     content: '';
@@ -56,18 +55,16 @@ export const Column = styled.div`
   }
 `;
 
-
 export const NumbersList = styled.div<{ offset: number }>`
-  display: flex;
-  flex-direction: column;
+  ${flex('column','center','center')}
   transform: translateY(${({ offset }) => offset}px);
   transition: transform 0.3s ease-in-out;
   border-radius: 10px;
+  border: 1px solid red;
+  padding: 1rem;
 `;
 
 export const Cell = styled.div`
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flex('column','center','center')}
+  ${size('30px', '30px')}
 `;

@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ClockContainer, Column, NumbersList, Cell } from './Clock.styled';
+import { DIGITS } from '../../constants/digits';
 
-// Columnas de dígitos
-const H1 = ['0', '1', '2', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-const H2 = ['0','1','2','3','4','5','6','7','8','9'];
-const M1 = ['0','1','2','3','4','5',' ', ' ', ' ', ' '];
-const M2 = ['0','1','2','3','4','5','6','7','8','9'];
-const S1 = ['0','1','2','3','4','5',' ', ' ', ' ', ' '];
-const S2 = ['0','1','2','3','4','5','6','7','8','9'];
-
-const CELL_HEIGHT = 30; // altura de cada celda
+const CELL_HEIGHT = 30;
 
 const Clock: React.FC = () => {
   const [time, setTime] = useState(new Date());
@@ -23,24 +16,25 @@ const Clock: React.FC = () => {
   const minutes = time.getMinutes().toString().padStart(2, '0');
   const seconds = time.getSeconds().toString().padStart(2, '0');
 
-  const digits = [
-    { col: H1, val: hours[0] },
-    { col: H2, val: hours[1] },
-    { col: M1, val: minutes[0] },
-    { col: M2, val: minutes[1] },
-    { col: S1, val: seconds[0] },
-    { col: S2, val: seconds[1] },
+  const digits: { col: readonly string[]; val: string }[] = [
+    { col: DIGITS.H1, val: hours[0] },
+    { col: DIGITS.H2, val: hours[1] },
+    { col: DIGITS.M1, val: minutes[0] },
+    { col: DIGITS.M2, val: minutes[1] },
+    { col: DIGITS.S1, val: seconds[0] },
+    { col: DIGITS.S2, val: seconds[1] },
   ];
 
   return (
     <ClockContainer>
       {digits.map((digit, i) => {
-        const index = digit.col.findIndex(n => n === digit.val);
-        const offset = -index * CELL_HEIGHT; // mueve el número actual al centro
+        const index = digit.col.findIndex((n) => n === digit.val);
+        const offset = -index * CELL_HEIGHT;
+
         return (
           <Column key={i}>
             <NumbersList offset={offset}>
-              {digit.col.map((num, idx) => (
+              {digit.col.map((num: string, idx: number) => (
                 <Cell key={idx}>{num}</Cell>
               ))}
             </NumbersList>
