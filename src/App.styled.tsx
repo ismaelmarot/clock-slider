@@ -15,7 +15,6 @@ export const GlobalReset = createGlobalStyle`
 
 export const AppContainer = styled.div`
   min-height: 100vh;
-  background-color: #fff;
-  border: 3px solid red;
+  background-color: rgba(255, 255, 255, 1);
 `;
 
