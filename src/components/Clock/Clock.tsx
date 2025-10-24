@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ClockContainer, Column, NumbersList, Cell } from './Clock.styled';
 import { DIGITS } from '../../constants/digits';
 
-const CELL_HEIGHT = 30;
+const CELL_HEIGHT = 50; // altura de cada número
 
 const Clock: React.FC = () => {
   const [time, setTime] = useState(new Date());
@@ -29,12 +29,12 @@ const Clock: React.FC = () => {
     <ClockContainer>
       {digits.map((digit, i) => {
         const index = digit.col.findIndex((n) => n === digit.val);
-        const offset = -index * CELL_HEIGHT;
+        const offset = (-index * CELL_HEIGHT) +230;
 
         return (
           <Column key={i}>
             <NumbersList offset={offset}>
-              {digit.col.map((num: string, idx: number) => (
+              {digit.col.map((num, idx) => (
                 <Cell key={idx}>{num}</Cell>
               ))}
             </NumbersList>

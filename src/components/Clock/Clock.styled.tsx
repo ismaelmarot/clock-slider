@@ -2,69 +2,33 @@ import styled from 'styled-components';
 import { flex } from '../../helpers/setFlex';
 import { size } from '../../helpers/setSize';
 
+const CELL_HEIGHT = 50;
+
 export const ClockContainer = styled.div`
   ${flex('row','center','center')}
-  ${size('100%', '100vh')}
-  gap: 20px;
+  gap: 10px;
+  height: 100vh;
   font-family: monospace;
-  font-size: 2rem;
 `;
 
 export const Column = styled.div`
-  ${flex('column','center','flex-start')}
-  ${size('2rem','2rem')}
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  ${flex('column','center','center')}
+  ${size(`${CELL_HEIGHT}px`, `${CELL_HEIGHT}px`)}
+  border-radius: 50%;
   border: 2px solid blue;
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 0px 0px rgba(255, 255, 255, 0);
+  background: rgba(0,0,255,0.1);
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.8),
-      transparent
-    );
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    ${size('1px','100%')}
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.8),
-      transparent,
-      rgba(255, 255, 255, 0.3)
-    );
-  }
 `;
 
 export const NumbersList = styled.div<{ offset: number }>`
   ${flex('column','center','center')}
   transform: translateY(${({ offset }) => offset}px);
   transition: transform 0.3s ease-in-out;
-  border-radius: 10px;
-  border: 1px solid red;
-  padding: 1rem;
 `;
 
 export const Cell = styled.div`
   ${flex('column','center','center')}
-  ${size('30px', '30px')}
+  ${size(`${CELL_HEIGHT}px`, `${CELL_HEIGHT}px`)}
+  line-height: ${CELL_HEIGHT}px;
+  font-size: 2rem;
 `;
