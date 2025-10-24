@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ClockContainer, Column, NumbersList, Cell } from './Clock.styled';
+import { ClockContainer, Column, NumbersList, Cell, Colon } from './Clock.styled';
 import { DIGITS } from '../../constants/digits';
 
 const CELL_HEIGHT = 50; // altura de cada número
@@ -29,16 +29,20 @@ const Clock: React.FC = () => {
     <ClockContainer>
       {digits.map((digit, i) => {
         const index = digit.col.findIndex((n) => n === digit.val);
-        const offset = (-index * CELL_HEIGHT) +230;
+        const offset = (-index * CELL_HEIGHT) + 230;
 
         return (
-          <Column key={i}>
-            <NumbersList offset={offset}>
-              {digit.col.map((num, idx) => (
-                <Cell key={idx}>{num}</Cell>
-              ))}
-            </NumbersList>
-          </Column>
+          <React.Fragment key={i}>
+            <Column>
+              <NumbersList offset={offset}>
+                {digit.col.map((num, idx) => (
+                  <Cell key={idx}>{num}</Cell>
+                ))}
+              </NumbersList>
+            </Column>
+            {/* Agregar ":" después de H2 y M2 */}
+            {(i === 1 || i === 3) && <Colon>:</Colon>}
+          </React.Fragment>
         );
       })}
     </ClockContainer>

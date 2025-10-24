@@ -32,3 +32,10 @@ export const Cell = styled.div`
   line-height: ${CELL_HEIGHT}px;
   font-size: 2rem;
 `;
+
+export const Colon = styled.div`
+  ${flex('column','center','center')}
+  font-size: 2rem;
+  line-height: ${CELL_HEIGHT}px;
+  height: ${CELL_HEIGHT}px;
+`;
