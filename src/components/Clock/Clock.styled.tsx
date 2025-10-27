@@ -6,8 +6,8 @@ const CELL_HEIGHT = 50;
 
 const pulse = keyframes`
   0% { transform: scale(1); }
-  40% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  40% { transform: scale(1.5); }
+  100% { transform: scale(1.3); }
 `;
 
 export const ClockContainer = styled.div`
@@ -24,7 +24,6 @@ export const Column = styled.div`
   border: 2px solid blue;
   background: rgba(0, 0, 255, 0.1);
   position: relative;
-  /* overflow: hidden; */
 `;
 
 export const NumbersList = styled.div<{ offset: number }>`

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { ClockContainer, Column, NumbersList, Cell, Colon } from './Clock.styled';
 import { DIGITS } from '../../constants/digits';
@@ -29,7 +30,7 @@ const Clock: React.FC = () => {
     <ClockContainer>
       {digits.map((digit, i) => {
         const index = digit.col.findIndex((n) => n === digit.val);
-        const offset = (-index * CELL_HEIGHT) + 230;
+        const offset = (-index * CELL_HEIGHT) + 225;
 
         return (
           <React.Fragment key={i}>
