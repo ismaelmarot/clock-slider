@@ -40,7 +40,6 @@ const Clock: React.FC = () => {
                 ))}
               </NumbersList>
             </Column>
-            {/* Agregar ":" después de H2 y M2 */}
             {(i === 1 || i === 3) && <Colon>:</Colon>}
           </React.Fragment>
         );
