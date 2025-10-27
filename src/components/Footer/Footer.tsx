@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { getCurrentYear } from '../../helpers/getCurrentYear';
 import TermsModal from '../TermsModal/TermsModal';
-import { Button, FooterStyled, Span, DivDesigned } from './Footer.styled';
 import LegalModal from '../LegalModal/LegalModal';
+import { Button, FooterStyled, Span, DivDesigned } from './Footer.styled';
 
 const Footer: React.FC = () => {
     const [showLegal, setShowLegal] = useState(false);
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <>
         <FooterStyled>
             <div className='row align-items-center text-center text-md-start'>
-                <DivDesigned className='col-md-8'>
+                <DivDesigned className='col-md-8' style={{border:'2px solid red'}}>
                     <p className='mb-0'>
                     © {getCurrentYear()} Designed and developed by Ismael Marot. All rights reserved.
                     </p>

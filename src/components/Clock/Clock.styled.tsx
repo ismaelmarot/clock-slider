@@ -6,8 +6,8 @@ const CELL_HEIGHT = 50;
 
 export const ClockContainer = styled.div`
   ${flex('row','center','center')}
+  height: 150vh;
   gap: 10px;
-  height: 100vh;
   font-family: monospace;
 `;
 
