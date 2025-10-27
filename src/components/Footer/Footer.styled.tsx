@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-// import { COLORS } from '../../styles/colors';
-import { flex } from '../../helpers/setFlex';
-import { size } from '../../helpers/setSize';
 
 export const FooterStyled = styled.footer`
+    margin: 1rem;
     padding-top: 1rem;
-    border: 3px solid red;
+    border-top: 1px solid black;
     font-size: .8rem;
 `
 export const Button = styled.button`

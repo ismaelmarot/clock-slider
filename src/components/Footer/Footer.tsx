@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <>
         <FooterStyled>
             <div className='row align-items-center text-center text-md-start'>
-                <DivDesigned className='col-md-8' style={{border:'2px solid red'}}>
+                <DivDesigned className='col-md-8'>
                     <p className='mb-0'>
                     © {getCurrentYear()} Designed and developed by Ismael Marot. All rights reserved.
                     </p>

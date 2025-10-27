@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ClockContainer, Column, NumbersList, Cell, Colon } from './Clock.styled';
 import { DIGITS } from '../../constants/digits';
 
-const CELL_HEIGHT = 50; // altura de cada número
+const CELL_HEIGHT = 50;
 
 const Clock: React.FC = () => {
   const [time, setTime] = useState(new Date());
