@@ -12,7 +12,7 @@ const pulse = keyframes`
 
 export const ClockContainer = styled.div`
   ${flex('row', 'center', 'center')}
-  height: 100vh;
+  min-height: 150vh;
   gap: 10px;
   font-family: monospace;
 `;
