@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { size } from './helpers/setSize';
 import img from '../src/assets/img.jpg';
-// import backgroundImage from './assets/background.jpg';
 
 export const GlobalReset = createGlobalStyle`
   * {
@@ -17,7 +16,6 @@ export const GlobalReset = createGlobalStyle`
 
 export const AppContainer = styled.div`
   min-height: 150vh;
-
   background-image: url(${img});
   background-size: cover;
   background-position: center;

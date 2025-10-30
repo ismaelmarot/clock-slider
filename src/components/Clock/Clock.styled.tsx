@@ -21,9 +21,20 @@ export const Column = styled.div`
   ${flex('column', 'center', 'center')}
   ${size(`${CELL_HEIGHT}px`, `${CELL_HEIGHT}px`)}
   border-radius: 50%;
-  border: 2px solid blue;
-  background: rgba(0, 0, 255, 0.1);
   position: relative;
+
+  /* Glass effect base */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 12px rgba(255, 255, 255, 0.3);
+
+  &::before,
+  &::after {
+    content: none;
+  }
 `;
 
 export const NumbersList = styled.div<{ offset: number }>`
@@ -41,11 +52,10 @@ export const Cell = styled.div<{ isActive?: boolean }>`
 
   ${({ isActive }) =>
     isActive &&
-    css`
-      animation: ${pulse} 1s ease;
-      font-weight: bold;
-      font-size: 1%.2;
-    `}
+      css`
+        animation: ${pulse} 1s ease;
+        font-weight: bold;
+  `}
 `;
 
 export const Colon = styled.div`

@@ -9,8 +9,8 @@ function App(): JSX.Element {
       <GlobalReset />
       <AppContainer>
         <Clock />
+        <Footer />
       </AppContainer>
-      <Footer />
     </>
   );
 }
