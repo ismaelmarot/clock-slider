@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ClockContainer, Column, NumbersList, Cell, Colon } from './Clock.styled';
 import { DIGITS } from '../../constants/digits';
