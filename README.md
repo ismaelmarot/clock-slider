@@ -1,7 +1,7 @@
 # Clock Slider
 
 <p align="center">
-  <a href="https://ismaelmarot.github.io/product-entry-app/#/general">
+  <a href="https://ismaelmarot.github.io/clock-slider">
     <img 
       src="https://img.shields.io/badge/🚀%20Ir%20a%20la%20aplicación-blue?style=for-the-badge&logoWidth=30" 
       alt="Ir a la aplicación"
