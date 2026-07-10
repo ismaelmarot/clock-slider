@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { size } from './helpers/setSize';
-import img from '../src/assets/img.jpg';
+import styled, { createGlobalStyle } from 'styled-components'
+import { size } from './helpers/setSize'
+import img from '../src/assets/img.jpg'
 
 export const GlobalReset = createGlobalStyle`
   * {
@@ -12,7 +12,7 @@ export const GlobalReset = createGlobalStyle`
   html, body, #root {
     ${size('100%','100%')}
   }
-`;
+`
 
 export const AppContainer = styled.div`
   min-height: 150vh;
@@ -20,5 +20,4 @@ export const AppContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
-`;
-
+`
