@@ -1,7 +1,7 @@
-import type { JSX } from 'react';
-import Clock from './components/Clock/Clock';
-import Footer from './components/Footer/Footer';
-import { AppContainer, GlobalReset } from './App.styled';
+import type { JSX } from 'react'
+import Clock from './components/Clock/Clock'
+import Footer from './components/Footer/Footer'
+import { AppContainer, GlobalReset } from './App.styled'
 
 function App(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ function App(): JSX.Element {
         <Footer />
       </AppContainer>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
