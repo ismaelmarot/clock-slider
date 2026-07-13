@@ -1,4 +1,4 @@
 export interface TermsModalProps {
     show: boolean;
-        onClose: () => void;
+        onClose: () => void
 }
