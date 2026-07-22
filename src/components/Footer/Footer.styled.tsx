@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const FooterStyled = styled.footer`
     margin: 1rem;
@@ -9,13 +9,13 @@ export const FooterStyled = styled.footer`
 export const Button = styled.button`
     font-size: .9rem;
     color: black;
-`;
+`
 
 export const Span = styled.span`
     font-weight: bolder;
     color: black;
-`;
+`
 
 export const DivDesigned = styled.div`
     color: black;
-`;
+`
