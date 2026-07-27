@@ -1,8 +1,8 @@
-import React from 'react';
-import type { LegalModalProps } from '../../interfaces/LegalModal.interface';
+import React from 'react'
+import type { LegalModalProps } from '../../interfaces/LegalModal.interface'
 import { getCurrentYear } from '../../helpers/getCurrentYear'
-import { Modal, Button } from 'react-bootstrap';
-import { AStyled, StyledModalBody } from './LegalModal.styled';
+import { Modal, Button } from 'react-bootstrap'
+import { AStyled, StyledModalBody } from './LegalModal.styled'
 
 const LegalModal: React.FC<LegalModalProps> = ({ show, onClose }) => {
     return (
@@ -46,7 +46,7 @@ const LegalModal: React.FC<LegalModalProps> = ({ show, onClose }) => {
                 <Button variant='secondary' onClick={onClose}>Cerrar</Button>
             </Modal.Footer>
         </Modal>
-    );
-};
+    )
+}
 
-export default LegalModal;
+export default LegalModal
