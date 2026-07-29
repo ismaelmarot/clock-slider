@@ -1,12 +1,12 @@
-import React from 'react';
-import packageJson from '../../../package.json';
-import { Modal, Button } from 'react-bootstrap';
-import { getCurrentYear } from '../../helpers/getCurrentYear';
-import type { TermsModalProps } from '../../interfaces/TermsModal.interface';
-import { SpanStyled, StyledModalBody } from './TermsModal.styled';
-import { AStyled } from '../LegalModal/LegalModal.styled';
+import React from 'react'
+import packageJson from '../../../package.json'
+import { Modal, Button } from 'react-bootstrap'
+import { getCurrentYear } from '../../helpers/getCurrentYear'
+import type { TermsModalProps } from '../../interfaces/TermsModal.interface'
+import { SpanStyled, StyledModalBody } from './TermsModal.styled'
+import { AStyled } from '../LegalModal/LegalModal.styled'
 
-const appName = packageJson.name;
+const appName = packageJson.name
 
 const TermsModal: React.FC<TermsModalProps> = ({ show, onClose }) => {
     return (
@@ -51,7 +51,7 @@ const TermsModal: React.FC<TermsModalProps> = ({ show, onClose }) => {
             <Button variant='secondary' onClick={onClose}>Cerrar</Button>
         </Modal.Footer>
         </Modal>
-    );
-};
+    )
+}
 
-export default TermsModal;
+export default TermsModal
