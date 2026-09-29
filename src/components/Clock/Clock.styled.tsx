@@ -2,7 +2,7 @@ import styled, { keyframes, css } from 'styled-components'
 import { flex } from '../../helpers/setFlex'
 import { size } from '../../helpers/setSize'
 
-const CELL_HEIGHT = 50;
+const CELL_HEIGHT = 50
 
 const pulse = keyframes`
   0% { transform: scale(1); }
